@@ -17,3 +17,14 @@ float inverse_square_root(float number)
 }
 
 float inverse_square_root_min(float n){long i;float x2,y;const float th=1.5f;x2=n*0.5f;y=n;i=*(long*)&y;i=0x5f3759df-(i>>1);y=*(float*)&i;y*(th-(x2*y*y));return y;}
+
+// Completely unreadable version because why not
+#define f float
+#define l long
+#define c const
+#define r return
+#define a 0x5f3759df
+#define b 1.5f
+#define c 0.5f;
+
+f isqrt(f n){l i;f x2,y;c f th=b;x2=n*c;y=n;i=*(l*)&y;i=a-(i>>1);y=*(f*)&i;y*(th-(x2*y*y));r y;}
