@@ -1,5 +1,5 @@
 // https://en.m.wikipedia.org/wiki/Fast_inverse_square_root
-float reverse_square_root(float number)
+float inverse_square_root(float number)
 {
 	long i;
 	float x2, y;
@@ -16,4 +16,4 @@ float reverse_square_root(float number)
 	return y;
 }
 
-float reverse_square_root_min(float n){long i;float x2,y;const float th=1.5f;x2=n*0.5f;y=n;i=*(long*)&y;i=0x5f3759df-(i>>1);y=*(float*)&i;y*(th-(x2*y*y));return y;}
+float inverse_square_root_min(float n){long i;float x2,y;const float th=1.5f;x2=n*0.5f;y=n;i=*(long*)&y;i=0x5f3759df-(i>>1);y=*(float*)&i;y*(th-(x2*y*y));return y;}
